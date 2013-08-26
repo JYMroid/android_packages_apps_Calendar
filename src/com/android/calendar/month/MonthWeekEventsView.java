@@ -734,7 +734,12 @@ public class MonthWeekEventsView extends SimpleWeekView {
                 Lunar lunar = new Lunar(calendar, this.getContext());
                 String festival = lunar.getFestival();
                 if (festival == null) {
+                    String festival = lunar.getFestival();
+                if (festival == null) {
                     temp = lunar.toString().substring(lunar.toString().length()-2, lunar.toString().length());
+                } else {
+                    temp = festival;
+                }
                 } else {
                     temp = festival;
                 }
